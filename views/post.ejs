@@ -42,6 +42,16 @@
           </div>
         </div>
       </div>
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <form action="/edit/<%= post._id %>" method="get">
+            <button>Edit</button>
+          </form>
+          <form action="/posts/<%= post._id %>?_method=DELETE" method="post">
+            <button>Delete</button>
+          </form>
+        </div>
+      </div>
     </div>
   </article>
 
