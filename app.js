@@ -9,7 +9,7 @@ const app = express()
 
 
 //CONNECT DB
-mongoose.connect('mongodb://127.0.0.1:27017/cleanBlog');
+mongoose.connect('mongodb+srv://alparslan:ZFxm9usdJRTwvmAE@cleanblog-app.mudimfn.mongodb.net/cleanBlog?retryWrites=true&w=majority')
 
 //TEMPLATE ENGINE
 app.set("view engine","ejs")
@@ -53,7 +53,8 @@ app.delete('/posts/:id', postController.deletePost)
 
 
 
-const port = 3000
+const port = process.env.PORT || 5000
+
 app.listen(port,()=>{
     console.log(`Server http://localhost:${port} adresinde başlatıldı..`)
 })
